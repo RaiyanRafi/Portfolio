@@ -1,0 +1,143 @@
+body {
+	background-color: #f0f0f5;
+	color: #555555;
+	font: 17px Arial, Helvetica, sans-serif;
+	line-height: 1.5em;
+	margin: 0;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+#main-header {
+	background-color: #a3a3c2;
+	color: #fff
+}
+
+#links {
+	background-color: #e0e0eb;
+}
+
+#links a {
+	color: #808080;
+	padding-right: 17px;
+}
+
+#links li {
+	display: inline;
+}
+
+#view-port{
+	background-image: url('photoshop.jpg');
+	background-position:center;
+	text-align: center;
+}
+
+#top{
+    color: #000000;
+}
+
+#message-box {
+	float:left;
+	width: 60%;
+	box-sizing: border-box;
+}
+
+#sidewall {
+	float:right;
+    background-image: url(Me.jpg);
+    display: inline-block;
+    margin-top: 20px;
+	width:500px;
+    height: 500px;
+    border: 2px solid #777;
+    border-radius: 50%;
+	color: black;
+	box-sizing: border-box;
+}
+
+#pic-name{
+    text-align: center;
+    text-transform: capitalize;
+}
+    
+.main-footer{
+	
+	text-align: center;
+	padding: 15px;
+	margin-top: 50px;
+}
+
+.icons{
+    width: 80%;
+	margin: auto;
+    overflow: hidden;
+}
+
+.icons ul{
+    margin: 0;
+    padding: 0;
+}
+
+.icons ul li{
+    list-style-type: none;
+    float: left;
+    margin-right: 10px;
+}
+
+.icons ul li:last-child{
+    margin-right: 0;
+}
+
+.icons ul li a{
+    background-image: url(icon.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 84px;
+    height: 84px;
+    display: inline-block;
+    border: 2px solid #777;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.icons ul li:hover:nth-child(1) a{
+    background-position: 0 -84px;
+}
+
+.icons ul li:nth-child(2) a{
+    background-position: -252px 0;
+}
+
+.icons ul li:hover:nth-child(2) a{
+    background-position: -252px -84px;
+}
+
+.icons ul li:nth-child(3) a{
+    background-position: -336px 0;
+}
+
+.icons ul li:hover:nth-child(3) a{
+    background-position: -336px -84px;
+}
+
+.icons ul li:nth-child(4) a{
+    background-position: -588px 0;
+}
+
+.icons ul li:hover:nth-child(4) a{
+    background-position: -588px -84px;
+}
+
+.icons ul li:nth-child(5) a{
+    background-position: -672px 0;
+}
+
+.icons ul li:hover:nth-child(5) a{
+    background-position: -672px -84px;
+}
+
+
