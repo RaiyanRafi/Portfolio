@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Users</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #092e4e;
+            font-family: consolas;
+            
+        }
+        
+        ul{
+            text-align: center;
+            position: relative;
+            width: 500px;
+            margin: 100px auto 0;
+            padding: 1px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        ul li{
+            display: flex;
+            background: #105189;
+            padding: 10px 20px;
+            color: #fff;
+            margin: 5px 0;
+            transition: 0.5s;
+        }
+        ul li:hover{
+            transform: scale(1.06);
+            background: #092e4e;
+        }
+        #button{
+            background: #031321;
+            margin: auto;
+            text-align: center;
+            position: center;
+            display: block;
+            padding: 15px 30px;
+            color: #2196f3;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            overflow: hidden;
+            transition: 0.2s;
+        }
+        #button:hover{
+            color: #255784;
+            background: #2196f3;
+            box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+            transition-delay: 0.2s;
+        }
+        #gu{
+            background: #105189;
+            font-family: consolas;
+            text-align: center;
+        }
+        #btn-info{
+            background: #105189;
+            font-family: consolas;
+            text-align: center;
+        }
+        #info{
+            font-family: consolas;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <h1 id="btn-info">Click this Button to Show Some Github User:</h1>
+    <button id="button">Github Users</button>
+    <br>
+    <h1 id="gu">Here Some Github Users:</h1>
+    <div id="info">
+    
+    <script>
+        document.getElementById('button').addEventListener('click', showData);
+        function showData() {
+            var req = new XMLHttpRequest();
+            req.open('GET', 'https://api.github.com/users', true);
+            req.onload = function(){
+                if(req.status==200){
+                    var people = JSON.parse(req.responseText)
+                    var display= ' ';
+                    for(var i in people){
+                    display +=
+                    '<div class="a">' +
+                    '<ul>' +
+                    '<img src="'+people[i].avatar_url+'" width="250px" height="250px">'+
+                    '<li>ID: '+people[i].id+'</li>' +
+                    '<li>Login: '+people[i].login+'</li>' 
+                    '<li>Repos:'+people[i].repos_url +'</li>'
+                    '</ul>' +
+                    
+                    '</div>';
+                    
+                    }
+                    document.getElementById('info').innerHTML=display;
+                }
+            }
+            req.send();
+        }
+    </script>
+    </div>
+</body>
+</html>
